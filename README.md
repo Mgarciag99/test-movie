@@ -1,27 +1,45 @@
-# MoviesProyect
+## Installation
+***
+A little intro about the installation. 
+im using angular v17
+```
+$ git clone https://github.com/Mgarciag99/happy_mondays.git
+$ cd ../path/to/the/file
+$ git fetch
+$ git checkout dev
+$ npm install
+$ ng serve
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.6.
+## Structure
+***
+A little intro about the structure. 
+```
+-- CORE
+    --COMPONENTS
+    --SERVICES
+    --GUARDS
+-- MODULES
+    --AUTHENTICATION
+      --LOGIN
+        --loginComponent
+        -authModule
+        -authRouting
+    --MOVIES
+      --MOVIES-LIST
+        --moviesListComponent
+        -moviesModule
+        -moviesRouting
+-- SHARED 
+    --COMPONENTS
 
-## Development server
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## How to enter the system 
+***
+IMPORTANT: LOGGED WITH THE FOLLOW CREDENTIALES. 
+```
+USER: marcog99
+PASSWORD: 12345
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```

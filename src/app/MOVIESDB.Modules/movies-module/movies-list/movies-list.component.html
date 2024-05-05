@@ -1,0 +1,18 @@
+<app-movies-filter
+></app-movies-filter>
+
+<div class="main-panel">
+    <app-movies-cards-list
+    [MoviesList]="moviesList"
+    [totalMovies]="totalMovies"
+    ></app-movies-cards-list>
+    <div
+    class="search-results"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    [infiniteScrollUpDistance]="2"
+    [infiniteScrollThrottle]="50"
+    (scrolled)="onScrollDown()"
+    (scrolledUp)="onScrollUp()"
+  ></div>
+  </div>
