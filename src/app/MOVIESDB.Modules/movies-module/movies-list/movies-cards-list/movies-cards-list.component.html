@@ -1,0 +1,21 @@
+<div class="bg-slate-900 py-10">
+  <div class="mx-auto max-w-4xl sm: px-4" >
+    <form action="" [formGroup]="formFilter">
+      <input type="text" name="price" id="price" formControlName="search" class="block w-full rounded-md border-0 py-1.5 pl-7 pr-20 bg-slate-700 text-gray-900 ring-1 ring-inset ring-gray-900 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6 text-white" placeholder="Buscar por Nombre">
+    </form>
+  </div>
+</div>
+
+<div class="bg-slate-950" id="container-list">
+  <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+    <h2 class="text-white font-semibold text-xl pb-8">Total de peliculas: {{totalMovies}}</h2>      
+    <h2 class="sr-only">Products</h2>
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      @for (movie of MoviesList | appFilter: this.formFilter.get('search')?.value ?? ''; track movie.id) {
+        <app-card [Movie]="movie"></app-card>
+      }@empty {
+        <h2 class="text-white font-semibold text-xl pb-8">No se encuentran peliculas con el nombre {{this.formFilter.get('search')?.value}}</h2>
+      }
+    </div>
+  </div>
+</div>
