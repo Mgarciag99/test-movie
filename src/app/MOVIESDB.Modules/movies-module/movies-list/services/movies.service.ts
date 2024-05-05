@@ -2,7 +2,7 @@ import { inject, Injectable } from '@angular/core';
 //TODO: refactory imports 
 import { ApiService } from '../../../../MOVIESDB.Core/services/api-service.service';
 import { environment } from '../../../../../environments/environments';
-import { paginationMovies } from '../interfaces';
+import { DetailMovie, paginationMovies } from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -18,5 +18,9 @@ export class MoviesService {
 
   getMoviesLatest(pageCurrent: number) {
     return this.ApiService.getMethod<paginationMovies>('/movie/now_playing', { params: { api_key: this.API_KEY, page: pageCurrent }, loaderType: 'dna' });
+  }
+
+  getMovieById(movieId: number) {
+    return this.ApiService.getMethod<DetailMovie>(`/movie/${movieId}`, { params: { api_key: this.API_KEY }, loaderType: 'dna' });
   }
 }

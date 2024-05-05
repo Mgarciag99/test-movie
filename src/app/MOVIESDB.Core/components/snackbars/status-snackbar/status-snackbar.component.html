@@ -1,12 +1,12 @@
-<div class="d-flex p-1">
+<div class="d-flex px-3">
    <mat-label matSnackBarLabel>
     <p class="mr-2 fw-bold status-snack-title">{{ getTypeTitle }}</p>
     <p class="mr2-2">{{message}}</p>
    </mat-label>
    <span matSnackBarActions>
     <button mat-fab matSnackBarAction (click)="snackbarRef.dismissWithAction()" class="status-snack-button">
-        <mat-icon class="status-snack-icon" *ngIf="getTypeTitle === 'inputs.success'">task_alt</mat-icon>
-        <mat-icon class="status-snack-icon" *ngIf="getTypeTitle === 'inputs.error'">cancel</mat-icon>
+        <mat-icon class="" *ngIf="getTypeTitle === 'success'">task_alt</mat-icon>
+        <mat-icon class="" *ngIf="getTypeTitle === 'error'">cancel</mat-icon>
     </button>
    </span>
 </div>

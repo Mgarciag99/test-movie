@@ -9,7 +9,7 @@ import { environment } from '../../../../environments/environments';
 export class LoginService {
   private ApiService = inject(ApiService);
   private API_KEY = environment.api_key;
-
+  
   generateNewToken() {
     return this.ApiService.getMethod<ResponseToken>('/authentication/token/new', { params: { api_key: this.API_KEY }, loaderType: 'dna' });
   }
@@ -22,8 +22,7 @@ export class LoginService {
   }
 
   deleteSession(payload: any){
-    return this.ApiService.deleteMethod<ResponseCreateSession>('/authentication/session/new', payload, { params: { api_key: this.API_KEY }, loaderType: 'dna' })
-
+    return this.ApiService.deleteMethod<ResponseCreateSession>('/authentication/session/delete', payload, { params: { api_key: this.API_KEY }, loaderType: 'dna' })
   }
 
 }
