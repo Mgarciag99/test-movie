@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FilterPipe } from '../../../MOVIESDB.Core/pipes/filter.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MoviesSeeComponent } from './movies-see/movies-see.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     MoviesListComponent,
     MoviesFilterComponent,
-    MoviesCardsListComponent
+    MoviesCardsListComponent,
+    MoviesSeeComponent
   ]
 })
 export class MoviesListModule { }

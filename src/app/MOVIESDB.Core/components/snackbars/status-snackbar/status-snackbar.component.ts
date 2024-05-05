@@ -36,6 +36,6 @@ export class StatusSnackbarComponent {
 
   get getTypeTitle(){
     const { panelClass } = this.dataSnackBar;
-    return (panelClass === 'success-snackbar') ? 'inputs.success' : 'inputs.error';
+    return (panelClass === 'success-snackbar') ? 'success' : 'error';
   }
 }

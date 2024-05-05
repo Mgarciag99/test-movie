@@ -19,8 +19,8 @@ export class LoginComponent {
   private unSubscribe = new Subject();
 
   formLogin = this.FormBuilder.group({
-    username: ['', Validators.required],
-    password: ['', Validators.required],
+    username: ['marcog99', [Validators.required]],
+    password: ['12345', [Validators.required]],
   })
 
 
